@@ -129,7 +129,8 @@ h6 {
 .bg-brand-blue {
   background-color: rgb(3, 0, 39) !important;
 }
-.bg-success-light{
+
+.bg-success-light {
   background-color: #F1FEF4 !important;
 }
 
@@ -233,17 +234,21 @@ section.why {
   }
 
   li.css-ha3bif-MuiTimelineItem-root::before {
-    content: none !important;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 6px 12px;
+    content: inherit !important;
+    flex: 1 1 0%;
+    padding: 6px 16px;
   }
 
   li.css-1rcbby2::before {
     content: inherit !important;
     flex: 1 1 0%;
     padding: 6px 16px;
+  }
+
+  .stepContainer div.row.justify-content-center.d-flex.align-items-center div.col-md-7.order-xs-1 ul.MuiTimeline-root.MuiTimeline-positionRight.css-1oanomk-MuiTimeline-root li.MuiTimelineItem-root.MuiTimelineItem-positionRight.MuiTimelineItem-missingOppositeContent.css-ha3bif-MuiTimelineItem-root {
+    content: inherit !important;
+    flex: 1 1 0%;
+    padding: 6px 6px;
   }
 }
 
@@ -446,6 +451,7 @@ td {
   background: #3BB75E;
   content: "";
 }
+
 .css-1ami7lv-MuiTimelineConnector-root {
   width: 2px;
   background-color: #FAA9A9 !important;

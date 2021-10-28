@@ -210,8 +210,8 @@ export default function Home() {
                     {/* For Big Screen */}
                     <h2 className="text-center my-4 text--blue-dark text-capitalize">How It Works</h2>
                     <MDBRow center className="d-flex align-items-center">
-                        <MDBCol md="7" className="order-xs-1">
-                            <Timeline className="" sx={{ display: { xs: 'block', sm: 'none' } }}>
+                        <MDBCol md="7" className="">
+                            <Timeline className="" key="big-screen" sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
@@ -272,7 +272,7 @@ export default function Home() {
                                 </TimelineItem>
                             </Timeline>
                             {/* For small screen */}
-                            <Timeline position="alternate" className="" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Timeline key="small-screen" position="alternate" className="" sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />

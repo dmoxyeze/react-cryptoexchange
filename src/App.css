@@ -233,15 +233,7 @@ section.why {
     font-size: 16px !important;
   }
 
-  li.css-ha3bif-MuiTimelineItem-root::before {
-    content: inherit !important;
-    flex: 1 1 0%;
-    padding: 6px 16px;
-  }
-
- 
-
-  li.custom-timeline::before {
+  .MuiTimelineItem-root::before {
     content: inherit !important;
     flex: 1 1 0%;
     padding: 6px 6px;

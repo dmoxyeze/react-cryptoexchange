@@ -440,7 +440,7 @@ td {
   content: "";
 }
 
-.css-1ami7lv-MuiTimelineConnector-root {
+.MuiTimelineConnector-root {
   width: 2px;
   background-color: #FAA9A9 !important;
   -webkit-box-flex: 1;

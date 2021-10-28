@@ -240,7 +240,7 @@ section.why {
     padding: 6px 12px;
   }
 
-  .css-1rcbby2::before {
+  li.css-1rcbby2::before {
     content: inherit !important;
     flex: 1 1 0%;
     padding: 6px 16px;

@@ -232,12 +232,18 @@ section.why {
     font-size: 16px !important;
   }
 
-  .css-ha3bif-MuiTimelineItem-root::before {
+  li.css-ha3bif-MuiTimelineItem-root::before {
     content: none !important;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     padding: 6px 12px;
+  }
+
+  .css-1rcbby2::before {
+    content: inherit !important;
+    flex: 1 1 0%;
+    padding: 6px 16px;
   }
 }
 

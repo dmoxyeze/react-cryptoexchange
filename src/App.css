@@ -450,7 +450,7 @@ td {
   flex-grow: 1;
 }
 .MuiTimelineContent-root{
-  font-size: 1.1px;
-  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 }

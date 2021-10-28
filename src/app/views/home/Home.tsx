@@ -211,7 +211,7 @@ export default function Home() {
                     <h2 className="text-center my-4 text--blue-dark text-capitalize">How It Works</h2>
                     <MDBRow center className="d-flex align-items-center">
                         <MDBCol md="7" className="">
-                            <Timeline className="" position="right" key="big-screen" sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <Timeline className="" key="big-screen" sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />

@@ -234,7 +234,7 @@ section.why {
   }
 
   .MuiTimelineItem-root::before {
-    content: inherit !important;
+    content: none !important;
     flex: 1 1 0%;
     padding: 6px 6px;
   }

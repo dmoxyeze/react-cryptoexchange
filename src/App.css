@@ -239,13 +239,9 @@ section.why {
     padding: 6px 16px;
   }
 
-  li.css-1rcbby2::before {
-    content: inherit !important;
-    flex: 1 1 0%;
-    padding: 6px 16px;
-  }
+ 
 
-  .custom-timeline::before {
+  li.custom-timeline::before {
     content: inherit !important;
     flex: 1 1 0%;
     padding: 6px 6px;

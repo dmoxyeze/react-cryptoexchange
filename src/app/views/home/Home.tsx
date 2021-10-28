@@ -212,7 +212,7 @@ export default function Home() {
                     <MDBRow center className="d-flex align-items-center">
                         <MDBCol md="7" className="order-xs-1">
                             <Timeline className="" sx={{ display: { xs: 'block', sm: 'none' } }}>
-                                <TimelineItem>
+                                <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
                                         <TimelineConnector color="success" />
@@ -231,7 +231,7 @@ export default function Home() {
                                         </div>
                                     </TimelineContent>
                                 </TimelineItem>
-                                <TimelineItem>
+                                <TimelineItem className="custom-timeline">
                                     <TimelineSeparator color="success">
                                         <TimelineDot color="success" />
                                         <TimelineConnector />
@@ -250,7 +250,7 @@ export default function Home() {
                                         </div>
                                     </TimelineContent>
                                 </TimelineItem>
-                                <TimelineItem>
+                                <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
                                         <TimelineConnector color="success" />
@@ -340,7 +340,7 @@ export default function Home() {
                     </MDBRow>
                 </MDBContainer>
             </section>
-            <section className="section bg-success-light why">
+            {/*<section className="section bg-success-light why">
                 <MDBContainer>
                     <MDBRow>
                         <MDBCol lg="7">
@@ -349,6 +349,7 @@ export default function Home() {
                     </MDBRow>
                 </MDBContainer>
             </section>
+            */}
         </>
     );
 }

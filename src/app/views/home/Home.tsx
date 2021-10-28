@@ -211,7 +211,7 @@ export default function Home() {
                     <h2 className="text-center my-4 text--blue-dark text-capitalize">How It Works</h2>
                     <MDBRow center className="d-flex align-items-center">
                         <MDBCol md="7" className="">
-                            <Timeline className="" key="big-screen" sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <Timeline className="" key="small-screen" sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
@@ -225,7 +225,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Register
                                             </h5>
-                                            <p className="text-muted mb-0 desc">
+                                            <p className="text-muted mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -244,7 +244,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Verify your email address
                                             </h5>
-                                            <p className="text-muted mb-0 desc">
+                                            <p className="text-muted mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -263,7 +263,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Buy or sell digital currency
                                             </h5>
-                                            <p className="text-muted mb-0 desc">
+                                            <p className="text-muted mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
 
@@ -272,7 +272,7 @@ export default function Home() {
                                 </TimelineItem>
                             </Timeline>
                             {/* For big screen */}
-                            <Timeline key="small-screen" position="alternate" className="" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Timeline key="big-screen" position="alternate" className="" sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
@@ -286,7 +286,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Register
                                             </h5>
-                                            <p className="text-muted mb-0 desc">
+                                            <p className="text-muted mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -305,7 +305,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Verify your email address
                                             </h5>
-                                            <p className="text-muted mb-0 desc">
+                                            <p className="text-muted mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -324,7 +324,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Buy or sell digital currency
                                             </h5>
-                                            <p className="text-muted mb-0 desc">
+                                            <p className="text-muted mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
 

@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: WorkSansRegular;
-  src: url(./fonts/Work_Sans/static/WorkSans-Regular.ttf)
+  src: url(./fonts/Work_Sans/static/WorkSans-Medium.ttf);
+  letter-spacing: normal;
 }
 
 @font-face {
@@ -447,4 +448,9 @@ td {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+.MuiTimelineContent-root{
+  font-size: 18px;
+  line-height: 1.6;
+  font-size: 18px;
 }

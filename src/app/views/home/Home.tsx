@@ -207,11 +207,11 @@ export default function Home() {
             </section>
             <section className="bg-body py-5 how-to">
                 <MDBContainer className="stepContainer">
-                    {/* For Big Screen */}
+                    {/* For small Screen */}
                     <h2 className="text-center my-4 text--blue-dark text-capitalize">How It Works</h2>
                     <MDBRow center className="d-flex align-items-center">
                         <MDBCol md="7" className="">
-                            <Timeline className="" key="big-screen" sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <Timeline className="" position="right" key="big-screen" sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
@@ -271,7 +271,7 @@ export default function Home() {
                                     </TimelineContent>
                                 </TimelineItem>
                             </Timeline>
-                            {/* For small screen */}
+                            {/* For big screen */}
                             <Timeline key="small-screen" position="alternate" className="" sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>

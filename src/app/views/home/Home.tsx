@@ -273,7 +273,7 @@ export default function Home() {
                             </Timeline>
                             {/* For small screen */}
                             <Timeline position="alternate" className="" sx={{ display: { xs: 'none', sm: 'block' } }}>
-                                <TimelineItem>
+                                <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
                                         <TimelineConnector color="success" />
@@ -292,7 +292,7 @@ export default function Home() {
                                         </div>
                                     </TimelineContent>
                                 </TimelineItem>
-                                <TimelineItem>
+                                <TimelineItem className="custom-timeline">
                                     <TimelineSeparator color="success">
                                         <TimelineDot color="success" />
                                         <TimelineConnector />
@@ -311,7 +311,7 @@ export default function Home() {
                                         </div>
                                     </TimelineContent>
                                 </TimelineItem>
-                                <TimelineItem>
+                                <TimelineItem className="custom-timeline">
                                     <TimelineSeparator>
                                         <TimelineDot color="success" />
                                         <TimelineConnector color="success" />

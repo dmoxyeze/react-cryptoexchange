@@ -245,7 +245,7 @@ section.why {
     padding: 6px 16px;
   }
 
-  .stepContainer div.row.justify-content-center.d-flex.align-items-center div.col-md-7.order-xs-1 ul.MuiTimeline-root.MuiTimeline-positionRight.css-1oanomk-MuiTimeline-root li.MuiTimelineItem-root.MuiTimelineItem-positionRight.MuiTimelineItem-missingOppositeContent.css-ha3bif-MuiTimelineItem-root::before {
+  .custom-timeline::before {
     content: inherit !important;
     flex: 1 1 0%;
     padding: 6px 6px;

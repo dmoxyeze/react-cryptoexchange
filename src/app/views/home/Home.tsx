@@ -9,11 +9,6 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { Container, Row, Col, Button, Card, Tabs, Tab } from "react-bootstrap";
 import {
-    MDBTabs,
-    MDBTabsItem,
-    MDBTabsLink,
-    MDBTabsContent,
-    MDBTabsPane,
     MDBCard,
     MDBCardBody,
     MDBFooter,
@@ -21,38 +16,23 @@ import {
     MDBRow,
     MDBCol
 } from 'mdb-react-ui-kit';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import TextField from '@mui/material/TextField';
-import FormHelperText from '@mui/material/FormHelperText';
+
 import {
     AppRegistrationSharp as RegisterIcon,
     VerifiedSharp as VerifiedIcon,
     AccountBalanceWalletSharp as WalletIcon,
 } from '@mui/icons-material';
 import PriceList from '../../components/price-list';
+import ExchangeComponent from '../../components/exchange-component';
+
 export default function Home() {
-    const [currency, setCurrency] = useState<string>('');
     const currencies = [
-        { name: 'Bitcoin', buy: 500, sell: 550, alias: 'BTC' },
-        { name: 'Ethereum', buy: 400, sell: 450, alias: 'ETH' },
-        { name: 'Litecoin', buy: 300, sell: 350, alias: 'LTC' },
-        { name: 'Bitcoin Cash', buy: 200, sell: 250, alias: 'BCH' },
-        { name: 'Perfect Money', buy: 100, sell: 150, alias: 'PM' },
+        { name: 'Bitcoin', buy: 61006.30, sell: 61018.30, alias: 'BTC' },
+        { name: 'Ethereum', buy: 4328.59, sell: 4330, alias: 'ETH' },
+        { name: 'Litecoin', buy: 192.09, sell: 193, alias: 'LTC' },
+        { name: 'Bitcoin Cash', buy: 579.63, sell: 580, alias: 'BCH' },
     ];
-    const handleCurrencyChange = (event: SelectChangeEvent) => {
-        setCurrency(event.target.value as string)
-    };
-    const [fillActive, setFillActive] = useState('buy');
-    const handleFillClick = (value: string) => {
-        if (value === fillActive) {
-            return;
-        }
-        setFillActive(value);
-    };
+    const DTN = 411.10; // dollar to naira 
     const settings = {
         dots: false,
         arrows: false,
@@ -108,99 +88,7 @@ export default function Home() {
                             </div>
                         </Col>
                         <Col lg={5} xs={12} className="my-5">
-                            <MDBCard className="shadow-lg shadow-5-strong hover-shadow bg-body rounded">
-                                <MDBCardBody>
-                                    <MDBTabs fill className='mb-3'>
-                                        <MDBTabsItem>
-                                            <MDBTabsLink onClick={() => handleFillClick('buy')} active={fillActive === 'buy'}>
-                                                Buy
-                                            </MDBTabsLink>
-                                        </MDBTabsItem>
-                                        <MDBTabsItem>
-                                            <MDBTabsLink onClick={() => handleFillClick('sell')} active={fillActive === 'sell'}>
-                                                Sell
-                                            </MDBTabsLink>
-                                        </MDBTabsItem>
-                                    </MDBTabs>
-
-                                    <MDBTabsContent>
-                                        <MDBTabsPane show={fillActive === 'buy'}>
-                                            <FormControl fullWidth required>
-                                                <InputLabel id="currency-select-label">Currency</InputLabel>
-                                                <Select
-                                                    labelId="currency-select-label"
-                                                    id="currency-select"
-                                                    value={currency}
-                                                    label="Currency"
-                                                    onChange={handleCurrencyChange}
-                                                >
-                                                    {currencies.map(currency => (
-                                                        <MenuItem key={currency.name} value={currency.name}>
-                                                            {currency.name}
-                                                        </MenuItem>
-                                                    ))}
-                                                </Select>
-                                                <FormHelperText className="my-2">
-                                                    Select the currency you wish to buy
-                                                </FormHelperText>
-                                            </FormControl>
-                                            <TextField
-                                                error={false}
-                                                fullWidth
-                                                helperText={String(`USD equivalent - 0.00 USD`)}
-                                                label="You Send &#8358;"
-                                                name="name"
-                                                value={String('')}
-                                                variant="outlined" />
-                                            <TextField
-                                                error={false}
-                                                fullWidth
-                                                helperText={String(` ETH = 2,102,439.04 NGN`)}
-                                                label="You Receive"
-                                                name="name"
-                                                value={String('')}
-                                                variant="outlined" />
-                                        </MDBTabsPane>
-                                        <MDBTabsPane show={fillActive === 'sell'}>
-                                            <FormControl fullWidth required>
-                                                <InputLabel id="currency-select-label">Currency</InputLabel>
-                                                <Select
-                                                    labelId="currency-select-label"
-                                                    id="currency-select"
-                                                    value={currency}
-                                                    label="Currency"
-                                                    onChange={handleCurrencyChange}
-                                                >
-                                                    {currencies.map(currency => (
-                                                        <MenuItem key={currency.name} value={currency.name}>
-                                                            {currency.name}
-                                                        </MenuItem>
-                                                    ))}
-                                                </Select>
-                                                <FormHelperText className="my-2">
-                                                    Select the currency you wish to sell
-                                                </FormHelperText>
-                                            </FormControl>
-                                            <TextField
-                                                error={false}
-                                                fullWidth
-                                                helperText={String(`USD equivalent - 0.00 USD`)}
-                                                label="You Send BTC"
-                                                name="name"
-                                                value={String('')}
-                                                variant="outlined" />
-                                            <TextField
-                                                error={false}
-                                                fullWidth
-                                                helperText={String(` ETH = 2,102,439.04 NGN`)}
-                                                label="You Receive &#8358;"
-                                                name="name"
-                                                value={String('')}
-                                                variant="outlined" />
-                                        </MDBTabsPane>
-                                    </MDBTabsContent>
-                                </MDBCardBody>
-                            </MDBCard>
+                           <ExchangeComponent currencies={currencies} dtn={DTN}/>
                         </Col>
                     </Row>
                 </Container>
@@ -225,7 +113,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Register
                                             </h5>
-                                            <p className="text-muted mb-0">
+                                            <p className="mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -244,7 +132,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Verify your email address
                                             </h5>
-                                            <p className="text-muted mb-0">
+                                            <p className="mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -263,7 +151,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Buy or sell digital currency
                                             </h5>
-                                            <p className="text-muted mb-0">
+                                            <p className="mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
 
@@ -286,7 +174,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Register
                                             </h5>
-                                            <p className="text-muted mb-0">
+                                            <p className="mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -305,7 +193,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Verify your email address
                                             </h5>
-                                            <p className="text-muted mb-0">
+                                            <p className="mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
                                         </div>
@@ -324,7 +212,7 @@ export default function Home() {
                                             <h5 className="mb-3 text-capitalize">
                                                 Buy or sell digital currency
                                             </h5>
-                                            <p className="text-muted mb-0">
+                                            <p className="mb-0">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque et odit, magnam sed blanditiis, iusto molestiae, vero nesciunt aut aperiam consequatur facere? Fuga, corrupti est hic voluptatum laboriosam porro.
                                             </p>
 

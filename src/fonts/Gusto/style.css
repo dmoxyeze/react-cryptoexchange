@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gusto';
+    src: local('Gusto Regular'), local('Gusto-Regular'),
+        url('Gusto.woff2') format('woff2'),
+        url('Gusto.woff') format('woff'),
+        url('Gusto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

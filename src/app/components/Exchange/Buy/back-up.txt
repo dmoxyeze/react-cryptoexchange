@@ -1,0 +1,49 @@
+import React from 'react'
+
+function backup() {
+    return (
+        <div>
+            <FormControl fullWidth required>
+                <InputLabel id="currency-select-label">Currency</InputLabel>
+                <TextField
+                    id="currency-select"
+                    select
+                    value={currency}
+                    label="Currency"
+                    onChange={handleCurrencyChange}
+                    helperText="Select the currency you wish to sell"
+                >
+                    {currencies.map((currency) => (
+                        <MenuItem key={currency.name} value={currency.name}>
+                            {currency.name}
+                        </MenuItem>
+                    ))}
+                </TextField>
+            </FormControl>
+            <TextField
+                error={false}
+                fullWidth
+                helperText={String(`USD equivalent - 0.00 USD`)}
+                label="You Send BTC"
+                name="name"
+                type="number"
+                value={amount}
+                onChange={handleAmountChange}
+                variant="outlined"
+                sx={{ display: currency ? 'block' : 'none' }}
+            />
+            <TextField
+                error={false}
+                fullWidth
+                helperText={String(` ETH = 2,102,439.04 NGN`)}
+                label="You Receive &#8358;"
+                name="name"
+                value={nairaAmount}
+                variant="outlined"
+                sx={{ display: amount ? 'block' : 'none' }}
+            />
+        </div>
+    )
+}
+
+export default backup;
